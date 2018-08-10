@@ -209,9 +209,6 @@ td,
 th {
   padding: 0;
 }
-.page-header {
-  background-color: rgba(225, 255, 253, 0.1);
-}
 .main-nav {
   max-width: 1150px;
   margin: 0 auto;
@@ -256,25 +253,46 @@ th {
 .about-me {
   max-width: 1150px;
   margin: 0 auto;
-  background-color: rgba(225, 255, 253, 0.1);
 }
 .about-me__info-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 .about-me__header {
   text-align: center;
   margin-top: 0;
 }
 .about-me__image {
-  width: 300px;
-  height: 300px;
+  width: 100%;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
+.about-me__contacts-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  min-width: 200px;
+}
+.about-me__contacts-item {
+  line-height: 35px;
+}
+.about-me__contacts-icon {
+  display: inline-block;
+  vertical-align: middle;
+}
+.about-me__link {
+  text-decoration: none;
+  color: black;
+}
+.about-me__link:hover {
+  color: grey;
+}
+.about-me__link:active {
+  color: lightgray;
+}
 .portfolio {
-  background-color: rgba(225, 255, 253, 0.1);
   padding-bottom: 30px;
 }
 .portfolio__header {
@@ -311,12 +329,4 @@ th {
 .portfolio__item-image:active {
   -webkit-box-shadow: 0 0 5px #d3d3d3;
           box-shadow: 0 0 5px #d3d3d3;
-}
-.contacts {
-  background-color: rgba(225, 255, 253, 0.1);
-  height: 300px;
-}
-.contacts__header {
-  text-align: center;
-  margin-top: 0;
 }
